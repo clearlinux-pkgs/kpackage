@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kpackage
-Version  : 5.91.0
-Release  : 49
-URL      : https://download.kde.org/stable/frameworks/5.91/kpackage-5.91.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.91/kpackage-5.91.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.91/kpackage-5.91.0.tar.xz.sig
+Version  : 5.92.0
+Release  : 50
+URL      : https://download.kde.org/stable/frameworks/5.92/kpackage-5.92.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.92/kpackage-5.92.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.92/kpackage-5.92.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-2.0 LGPL-2.0
@@ -18,7 +18,6 @@ Requires: kpackage-data = %{version}-%{release}
 Requires: kpackage-lib = %{version}-%{release}
 Requires: kpackage-license = %{version}-%{release}
 Requires: kpackage-locales = %{version}-%{release}
-Requires: kpackage-man = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
@@ -88,24 +87,16 @@ Group: Default
 locales components for the kpackage package.
 
 
-%package man
-Summary: man components for the kpackage package.
-Group: Default
-
-%description man
-man components for the kpackage package.
-
-
 %prep
-%setup -q -n kpackage-5.91.0
-cd %{_builddir}/kpackage-5.91.0
+%setup -q -n kpackage-5.92.0
+cd %{_builddir}/kpackage-5.92.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1644852687
+export SOURCE_DATE_EPOCH=1647290272
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -121,12 +112,12 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1644852687
+export SOURCE_DATE_EPOCH=1647290272
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kpackage
-cp %{_builddir}/kpackage-5.91.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kpackage/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/kpackage-5.91.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kpackage/e712eadfab0d2357c0f50f599ef35ee0d87534cb
-cp %{_builddir}/kpackage-5.91.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kpackage/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/kpackage-5.92.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kpackage/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/kpackage-5.92.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kpackage/e712eadfab0d2357c0f50f599ef35ee0d87534cb
+cp %{_builddir}/kpackage-5.92.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kpackage/20079e8f79713dce80ab09774505773c926afa2a
 pushd clr-build
 %make_install
 popd
@@ -171,27 +162,13 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Package.so.5
-/usr/lib64/libKF5Package.so.5.91.0
+/usr/lib64/libKF5Package.so.5.92.0
 
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/kpackage/20079e8f79713dce80ab09774505773c926afa2a
 /usr/share/package-licenses/kpackage/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
 /usr/share/package-licenses/kpackage/e712eadfab0d2357c0f50f599ef35ee0d87534cb
-
-%files man
-%defattr(0644,root,root,0755)
-/usr/share/man/ca/man1/kpackagetool5.1
-/usr/share/man/de/man1/kpackagetool5.1
-/usr/share/man/es/man1/kpackagetool5.1
-/usr/share/man/fr/man1/kpackagetool5.1
-/usr/share/man/it/man1/kpackagetool5.1
-/usr/share/man/man1/kpackagetool5.1
-/usr/share/man/nl/man1/kpackagetool5.1
-/usr/share/man/pt/man1/kpackagetool5.1
-/usr/share/man/pt_BR/man1/kpackagetool5.1
-/usr/share/man/sv/man1/kpackagetool5.1
-/usr/share/man/uk/man1/kpackagetool5.1
 
 %files locales -f libkpackage5.lang
 %defattr(-,root,root,-)
