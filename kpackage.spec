@@ -6,7 +6,7 @@
 #
 Name     : kpackage
 Version  : 5.103.0
-Release  : 147
+Release  : 148
 URL      : https://download.kde.org/stable/frameworks/5.103/kpackage-5.103.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.103/kpackage-5.103.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.103/kpackage-5.103.0.tar.xz.sig
@@ -112,7 +112,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676662685
+export SOURCE_DATE_EPOCH=1676685692
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -128,7 +128,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1676662685
+export SOURCE_DATE_EPOCH=1676685692
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kpackage
 cp %{_builddir}/kpackage-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kpackage/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
