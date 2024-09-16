@@ -1,72 +1,11 @@
-libKF6Package.so.6:KPackage::PackageJob::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Package.so.6:KPackage::PackageJob::qt_metacast(char const*)
+libKF6Package.so.6:KPackage::Package::Package(KPackage::PackageStructure*)
+libKF6Package.so.6:KPackage::Package::setAllowExternalPaths(bool)
+libKF6Package.so.6:KPackage::Package::~Package()
 libKF6Package.so.6:KPackage::PackageJob::start()
-libKF6Package.so.6:KPackage::PackageJob::update(QString const&, QString const&, QString const&)
-libKF6Package.so.6:KPackage::PackageJob::install(QString const&, QString const&, QString const&)
-libKF6Package.so.6:KPackage::PackageJob::uninstall(QString const&, QString const&, QString const&)
 libKF6Package.so.6:KPackage::PackageJob::~PackageJob()
-libKF6Package.so.6:KPackage::PackageJob::~PackageJob()
-libKF6Package.so.6:KPackage::PackageJob::~PackageJob()
-libKF6Package.so.6:KPackage::PackageLoader::loadPackage(QString const&, QString const&)
-libKF6Package.so.6:KPackage::PackageLoader::findPackages(QString const&, QString const&, std::function<bool (KPluginMetaData const&)>)
-libKF6Package.so.6:KPackage::PackageLoader::listPackages(QString const&, QString const&)
-libKF6Package.so.6:KPackage::PackageLoader::listKPackages(QString const&, QString const&)
-libKF6Package.so.6:KPackage::PackageLoader::listPackagesMetadata(QString const&, QString const&)
-libKF6Package.so.6:KPackage::PackageLoader::loadPackageStructure(QString const&)
-libKF6Package.so.6:KPackage::PackageLoader::addKnownPackageStructure(QString const&, KPackage::PackageStructure*)
+libKF6Package.so.6:KPackage::PackageLoader::PackageLoader()
 libKF6Package.so.6:KPackage::PackageLoader::self()
-libKF6Package.so.6:KPackage::PackageLoader::PackageLoader()
-libKF6Package.so.6:KPackage::PackageLoader::PackageLoader()
-libKF6Package.so.6:KPackage::PackageLoader::~PackageLoader()
-libKF6Package.so.6:KPackage::PackageLoader::~PackageLoader()
 libKF6Package.so.6:KPackage::PackageLoader::~PackageLoader()
 libKF6Package.so.6:KPackage::PackageStructure::initPackage(KPackage::Package*)
 libKF6Package.so.6:KPackage::PackageStructure::pathChanged(KPackage::Package*)
-libKF6Package.so.6:KPackage::PackageStructure::qt_metacall(QMetaObject::Call, int, void**)
-libKF6Package.so.6:KPackage::PackageStructure::qt_metacast(char const*)
-libKF6Package.so.6:KPackage::PackageStructure::PackageStructure(QObject*, QList<QVariant> const&)
-libKF6Package.so.6:KPackage::PackageStructure::PackageStructure(QObject*, QList<QVariant> const&)
 libKF6Package.so.6:KPackage::PackageStructure::~PackageStructure()
-libKF6Package.so.6:KPackage::PackageStructure::~PackageStructure()
-libKF6Package.so.6:KPackage::PackageStructure::~PackageStructure()
-libKF6Package.so.6:KPackage::Package::setMetadata(KPluginMetaData const&)
-libKF6Package.so.6:KPackage::Package::setRequired(QByteArray const&, bool)
-libKF6Package.so.6:KPackage::Package::setMimeTypes(QByteArray const&, QList<QString> const&)
-libKF6Package.so.6:KPackage::Package::removeDefinition(QByteArray const&)
-libKF6Package.so.6:KPackage::Package::addFileDefinition(QByteArray const&, QString const&)
-libKF6Package.so.6:KPackage::Package::setFallbackPackage(KPackage::Package const&)
-libKF6Package.so.6:KPackage::Package::setDefaultMimeTypes(QList<QString> const&)
-libKF6Package.so.6:KPackage::Package::setAllowExternalPaths(bool)
-libKF6Package.so.6:KPackage::Package::setDefaultPackageRoot(QString const&)
-libKF6Package.so.6:KPackage::Package::addDirectoryDefinition(QByteArray const&, QString const&)
-libKF6Package.so.6:KPackage::Package::setContentsPrefixPaths(QList<QString> const&)
-libKF6Package.so.6:KPackage::Package::setPath(QString const&)
-libKF6Package.so.6:KPackage::Package::Package(KPackage::PackageStructure*)
-libKF6Package.so.6:KPackage::Package::Package(KPackage::Package const&)
-libKF6Package.so.6:KPackage::Package::Package(KPackage::PackageStructure*)
-libKF6Package.so.6:KPackage::Package::Package(KPackage::Package const&)
-libKF6Package.so.6:KPackage::Package::~Package()
-libKF6Package.so.6:KPackage::Package::~Package()
-libKF6Package.so.6:KPackage::Package::~Package()
-libKF6Package.so.6:KPackage::Package::operator=(KPackage::Package const&)
-libKF6Package.so.6:KPackage::PackageJob::metaObject() const
-libKF6Package.so.6:KPackage::PackageJob::package() const
-libKF6Package.so.6:KPackage::PackageStructure::metaObject() const
-libKF6Package.so.6:KPackage::Package::isRequired(QByteArray const&) const
-libKF6Package.so.6:KPackage::Package::directories() const
-libKF6Package.so.6:KPackage::Package::requiredFiles() const
-libKF6Package.so.6:KPackage::Package::fallbackPackage() const
-libKF6Package.so.6:KPackage::Package::cryptographicHash(QCryptographicHash::Algorithm) const
-libKF6Package.so.6:KPackage::Package::hasValidStructure() const
-libKF6Package.so.6:KPackage::Package::allowExternalPaths() const
-libKF6Package.so.6:KPackage::Package::defaultPackageRoot() const
-libKF6Package.so.6:KPackage::Package::contentsPrefixPaths() const
-libKF6Package.so.6:KPackage::Package::requiredDirectories() const
-libKF6Package.so.6:KPackage::Package::path() const
-libKF6Package.so.6:KPackage::Package::files() const
-libKF6Package.so.6:KPackage::Package::fileUrl(QByteArray const&, QString const&) const
-libKF6Package.so.6:KPackage::Package::isValid() const
-libKF6Package.so.6:KPackage::Package::filePath(QByteArray const&, QString const&) const
-libKF6Package.so.6:KPackage::Package::metadata() const
-libKF6Package.so.6:KPackage::Package::entryList(QByteArray const&) const
-libKF6Package.so.6:KPackage::Package::mimeTypes(QByteArray const&) const
